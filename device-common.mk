@@ -651,5 +651,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.opa.eligible_device=true
 
+# Camera
+PRODUCT_PACKAGES += \
+    libmm-qcamera
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.1-service.clearkey
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
+
+# Tool
+PRODUCT_PACKAGES += \
+    libtinyxml
+
 # Google apps
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
