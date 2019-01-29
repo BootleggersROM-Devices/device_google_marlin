@@ -20,6 +20,10 @@
 
 PRODUCT_SHIPPING_API_LEVEL := 25
 
+# Enforce privapp-permissions whitelist
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=enforce
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
 
