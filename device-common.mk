@@ -649,3 +649,6 @@ PRODUCT_PACKAGES += \
 # Google Assistant
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.opa.eligible_device=true
+
+# Google apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
