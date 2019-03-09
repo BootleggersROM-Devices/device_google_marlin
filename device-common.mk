@@ -675,5 +675,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyxml
 
+# VR Services
+PRODUCT_PACKAGES += \
+    bufferhubd \
+    performanced \
+    virtual_touchpad \
+    vr_hwc
+
 # Google apps
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
