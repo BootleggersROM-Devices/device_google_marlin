@@ -844,8 +844,8 @@ PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/platform/soc/624000.ufshc/by-name/sys
 $(call inherit-product, build/target/product/verity.mk)
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-  SystemUIGoogle \
-  SettingsGoogle \
+  SystemUI \
+  Settings \
   NexusLauncherPrebuilt \
 
 PRODUCT_LOADED_BY_PRIVILEGED_MODULES += \
