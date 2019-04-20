@@ -696,5 +696,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.lmk.kill_timeout_ms=100 \
     ro.lmk.use_minfree_levels=true
 
+# Always preopt extracted APKs to prevent
+# extracting out of the APK for gms modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Google apps
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
