@@ -847,6 +847,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
   SystemUI \
   Settings \
   NexusLauncherPrebuilt \
+  Lawnchair
 
 PRODUCT_LOADED_BY_PRIVILEGED_MODULES += \
   qti-vzw-ims-internal \
