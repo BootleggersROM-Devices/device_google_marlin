@@ -6,6 +6,10 @@
 
     <privapp-permissions package="com.quicinc.cne.CNEService">
         <permission name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.htc.omadm.trigger">
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+    </privapp-permissions>
 </permissions>
