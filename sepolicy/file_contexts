@@ -132,6 +132,7 @@
 /vendor/bin/init\.power\.sh        u:object_r:init_power_exec:s0
 /vendor/bin/init\.radio\.sh        u:object_r:init_radio_exec:s0
 /vendor/bin/init\.foreground\.sh   u:object_r:init_foreground_exec:s0
+/vendor/bin/init\.cpufreq_governor\.sh  u:object_r:init_cpufreq_governor_exec:s0
 
 /vendor/bin/hw/android\.hardware\.health@2\.0-service\.marlin          u:object_r:hal_health_default_exec:s0
 
