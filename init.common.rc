@@ -353,6 +353,7 @@ on early-boot
 
     chmod 0664 /sys/devices/virtual/graphics/fb0/msm_cmd_autorefresh_en
     chown system graphics /sys/devices/virtual/graphics/fb0/msm_cmd_autorefresh_en
+    write /sys/devices/virtual/graphics/fb0/idle_time 100
 
     chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
     chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
@@ -371,6 +372,14 @@ on early-boot
 
     # Permission for vibrator amplitude
     chown system system /sys/class/timed_output/vibrator/voltage_level
+
+    # Setup permission for powerHAL
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /dev/cpu_dma_latency
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq
 
     # wait for devices
     wait_for_prop sys.qcom.devup 1
@@ -780,7 +789,10 @@ service vendor.perfd /vendor/bin/perfd
    disabled
 
 on property:sys.post_boot.parsed=1
-    start vendor.perfd
+    # Setup permission for powerHAL
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
 
 on property:sys.boot_completed=1
     start vendor.power_sh

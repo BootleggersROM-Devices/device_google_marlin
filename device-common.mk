@@ -138,11 +138,13 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.light@2.0-service \
     android.hardware.memtrack@1.0-service \
-    android.hardware.power@1.1-service.marlin \
+    android.hardware.power@1.2-service.marlin-libperfmgr \
     android.hardware.sensors@1.0-service \
     android.hardware.vr@1.0-service \
 
-PRODUCT_PROPERTY_OVERRIDES += ro.hardware.power=marlin
+# Power hint
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

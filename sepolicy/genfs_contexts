@@ -13,6 +13,7 @@ genfscon proc /debug/fwdump                           u:object_r:proc_wifi_dbg:s
 genfscon proc /debugdriver/driverdump                 u:object_r:proc_wifi_dbg:s0
 
 # sysfs
+genfscon sysfs /devices/virtual/graphics/fb0          u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/nanohub/nanohub       u:object_r:sysfs_nanoapp_cmd:s0
 genfscon sysfs /devices/virtual/net                   u:object_r:sysfs_net:s0
 genfscon sysfs /devices/virtual/thermal               u:object_r:sysfs_thermal:s0
@@ -89,3 +90,4 @@ genfscon debugfs /cnss_runtime_pm          u:object_r:debugfs_runtime_pm:s0
 genfscon debugfs /cnss-prealloc/status     u:object_r:debugfs_cnss:s0
 genfscon debugfs /ufshcd0                  u:object_r:debugfs_ufs:s0
 genfscon debugfs /fg_memif                 u:object_r:debugfs_fg_sram:s0
+genfscon debugfs /system_stats             u:object_r:debugfs_system_stats:s0
