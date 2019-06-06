@@ -50,7 +50,6 @@ vendor/bin/myftm
 vendor/bin/nanohub_slpi
 vendor/bin/netmgrd
 vendor/bin/nl_listener
-vendor/bin/perfd
 vendor/bin/PktRspTest
 vendor/bin/pm-proxy
 vendor/bin/pm-service

@@ -781,13 +781,6 @@ service vendor.diag_mdlog_stop /vendor/bin/diag_mdlog -k
     disabled
     oneshot
 
-service vendor.perfd /vendor/bin/perfd
-   class main
-   user root
-   group root system
-   writepid /dev/cpuset/system-background/tasks
-   disabled
-
 on property:sys.post_boot.parsed=1
     # Setup permission for powerHAL
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
