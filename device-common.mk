@@ -778,6 +778,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno
 
+# Google apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+
 include device/google/marlin/utils.mk
 
 $(call add-product-sanitizer-module-config,wpa_supplicant,never)
